@@ -14,7 +14,7 @@ def main():
     if ((len(sys.argv) > 3) or (len(sys.argv) < 2) or (sys.argv[1] == "--help") or (sys.argv[1] == "-h")):
         print(
             """
-            Usage: program_name [OPTIONS]
+            Usage: py scripts/main.py [OPTIONS]
 
             Options:
             --file PATH       Path to the data file.
