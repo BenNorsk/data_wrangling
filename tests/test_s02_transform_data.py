@@ -1,7 +1,4 @@
 import pytest
-import os
-import sys
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 import pandas as pd
 from scripts import s02_transform_data as s02
 

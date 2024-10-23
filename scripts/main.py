@@ -1,5 +1,5 @@
-from s01_read_data import read_data
-from s02_transform_data import transform_data
+from scripts.s01_read_data import read_data
+from scripts.s02_transform_data import transform_data
 import pandas as pd
 
 
