@@ -8,7 +8,7 @@ def add_children_column(df: pd.DataFrame) -> pd.DataFrame:
     Args:
         df: pd.DataFrame, the DataFrame with the data
     Returns:
-        pd.DataFrame
+        pd.DataFrame, the DataFrame with the 'child' column added
     """
     # If the age is less than 18, the person is a child
     df['child'] = df['age'] < 18
@@ -20,7 +20,7 @@ def convert_income_nans(df: pd.DataFrame) -> pd.DataFrame:
     Args:
         df: pd.DataFrame, the DataFrame with the data
     Returns:
-        pd.DataFrame
+        pd.DataFrame, the DataFrame with NaN values in the income column converted to 0
     """
     df['income'] = df['income'].fillna(0)
     return df
@@ -31,7 +31,7 @@ def add_main_earner(df: pd.DataFrame) -> pd.DataFrame:
     Args:
         df: pd.DataFrame, the DataFrame with the data
     Returns:
-        pd.DataFrame
+        pd.DataFrame, the DataFrame with the 'main_earner' column added
     """
     # Group by the household
     households = df.groupby('household_id')
@@ -57,7 +57,7 @@ def aggregate_household_data(data: pd.DataFrame) -> pd.DataFrame:
     Args:
         data: pd.DataFrame, the DataFrame with the data
     Returns:
-        pd.DataFrame
+        pd.DataFrame, the DataFrame with the data aggregated at the household level
     """
     # Group by  the household
     households = data.groupby('household_id')
@@ -97,6 +97,13 @@ def aggregate_household_data(data: pd.DataFrame) -> pd.DataFrame:
 
 
 def transform_data(data: pd.DataFrame) -> pd.DataFrame:
+    """
+    Transform the data by adding columns and aggregating at the household level
+    Args:
+        data: pd.DataFrame, the DataFrame with the data
+    Returns:
+        pd.DataFrame, the transformed DataFrame
+    """
     # Add the children column
     data = add_children_column(data)
     # Convert NaN values in the income column to 0
