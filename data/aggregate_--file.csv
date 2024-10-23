@@ -1,0 +1,5 @@
+household_id,size_hh,mean_age,min_age,max_age,nr_children,nr_female,mean_income,total_income,main_earner_female
+37,3,19.3,19,20,0,1,6666.7,20000.0,no
+241,1,50.0,50,50,0,1,90000.0,90000.0,yes
+242,1,29.0,29,29,0,0,20000.0,20000.0,no
+155789,3,44.7,15,61,1,1,38333.3,115000.0,yes
