@@ -9,3 +9,7 @@ This is the package created by Benjamin Brückner (blb46) for the D100 course at
             --random          Generate random data.
             -h, --help        Show this message and exit.
 
+To install all required dependencies for this script run the following command in the main directory.
+
+    pip install -r requirements.txt
+
